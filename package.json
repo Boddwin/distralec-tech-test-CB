@@ -1,0 +1,24 @@
+{
+  "name": "roblos12-distrelec-tech-test-0445a0fc44af",
+  "version": "1.0.0",
+  "description": "##Constuct An Improved Version Of A Carousel Component",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Boddwin/distralec-tech-test-CB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Boddwin/distralec-tech-test-CB/issues"
+  },
+  "homepage": "https://github.com/Boddwin/distralec-tech-test-CB#readme"
+}

@@ -1,7 +1,7 @@
 // Initialize modules
-// Importing specific gulp API functions lets us write them below as series() instead of gulp.series()
+// Importing specific gulp API functions
 const { src, dest, watch, series, parallel } = require('gulp');
-// Importing all the Gulp-related packages we want to use
+// Importing all the Gulp-related packages
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');

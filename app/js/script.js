@@ -5,23 +5,26 @@ var app = {};
 
 
 $(document).ready(function () {
-    var itemClass;
-    $.getJSON('./src/data.json', {get_param: 'value'}, function (getArray) {
-        $.each(getArray.data, function (index, element) {
-            var totalItems = $(".glide__slide").length;
-            if(totalItems === 0) {
-                itemClass = "glide__slide active";
-            }
-            else {
-                itemClass = "glide__slide";
-            }
-            console.log(totalItems);
-            var thisImage = element.productImageUrl;
-            $('.glide__slides').append('<li class="'+ itemClass +'">' +
-                '<img class="d-block w-100" src="' + thisImage + '" alt="'+ element.productImageAltText +'">' +
-                '<div class="carousel-caption">' +
-                '<h3>' + element.name + '</h3>' +
-                '</div>' + '</li>');
+  
+    // FETCHING DATA FROM JSON FILE
+    $.getJSON("src/data.json", 
+            function (data) {
+        var item = '';
+
+        console.log(data);
+
+        // ITERATING THROUGH OBJECTS
+        $.each(data.carouselData, function (key, value) {
+
+            // console.log("key:", key + ': value: '  + value); 
+            console.log('name: ' + value.name + ' | type: ' +value.typeName);
+
+            // CONSTRUCTION OF LIST USING DATA FROM JSON OBJECT
+            item += '<li class="glide__slide">' + '<p>' + value.typeName + '</p>' + '<p>' + value.name + '</p>' + '<img src="value.productImageUrl">' + '<p>' + value.salesUnit + '</p>' + '<p>' + value.price.formattedValue + '</p>' + '<button>Buy now</button>' + '</li>';
+
         });
+          
+        //INSERTING ROWS INTO TABLE 
+        $('.glide__slides').append(item);
     });
-})
+});
